@@ -1,5 +1,0 @@
-cmake-build-debug/
-*.o
-*.exe
-/bin/
-/build/
