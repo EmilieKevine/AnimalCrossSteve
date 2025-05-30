@@ -4,6 +4,7 @@
 #include <glm/glm.hpp>
 #include "glm/ext.hpp"
 #include <glm/gtc/matrix_transform.hpp>
+#include "node.h"
 
 
 Viewer::Viewer(int width, int height)
@@ -61,7 +62,8 @@ Viewer::Viewer(int width, int height)
     scene_root = new Node();
 
     // initialize the camera
-    camera = new Camera(width, height, glm::vec3(0.0f, 0.0f, 2.0f));
+    camera = new Camera(width, height, glm::vec3(-0.00392071f, 1.02457f, - 3.70982f));
+
 }
 
 
@@ -82,6 +84,8 @@ void Viewer::run()
 
         //Check keyboard and mouse inputs
         camera->Inputs(win);
+
+        
 
         glm::mat4 model = glm::mat4(1.0f);
 

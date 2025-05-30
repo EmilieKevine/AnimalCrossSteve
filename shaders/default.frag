@@ -7,7 +7,7 @@ in vec2 TexCoords;
 
 uniform sampler2D diffuse_map;
 uniform vec3 materialColor;
-uniform vec3 lightPos = vec3(10.0, 10.0, 10.0);
+uniform vec3 lightPos = vec3(0.0, 1.0, 0.0);
 uniform vec3 viewPos = vec3(0.0, 0.0, 3.0);
 
 void main() {

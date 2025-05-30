@@ -29,6 +29,10 @@ public:
     //Camera declaration
     Camera *camera;
 
+    GLFWwindow* getWin() {
+        return win;
+    }
+
 private:
     GLFWwindow* win;
     static void key_callback_static(GLFWwindow* window, int key, int scancode, int action, int mods);
