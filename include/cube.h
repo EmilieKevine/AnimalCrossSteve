@@ -16,12 +16,13 @@ public:
 private:
 
     std::vector<glm::vec3> vertex_buffer_data;
+    std::vector<glm::vec3> normals;
     std::vector<unsigned int> indices;
 
     unsigned int num_indices;
 
     GLuint VAO;
-    GLuint buffers[2];
+    GLuint buffers[3];
 };
 
 #endif

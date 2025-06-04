@@ -367,7 +367,7 @@ int main()
      ****************************/
 
     // Create cube with skybox
-    Shape* cube = new TexturedCube(skybox_shader, skybox);
+    Shape* cube = new TexturedCube(skybox_shader, skybox, glm::vec3(0.0f, -3.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), white);
     glm::mat4 cube_mat = glm::scale(glm::mat4(1.0f), glm::vec3(1.0f, 1.0f, 1.0f));
 
     Node* cube_node = new Node(cube_mat);
@@ -384,7 +384,7 @@ int main()
      ****************************/
 
      // Create cube with skybox
-    Shape* cube2 = new TexturedCube(skybox_shader, skybox);
+    Shape* cube2 = new TexturedCube(skybox_shader, skybox, glm::vec3(7.0f, -3.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), white);
     glm::mat4 cube_mat2 = glm::translate(glm::mat4(1.0f), glm::vec3(7.0f, 0.0f, 0.0f)) * glm::scale(glm::mat4(1.0f), glm::vec3(1.0f, 1.0f, 1.0f));
 
     Node* cube_node2 = new Node(cube_mat2);
@@ -476,8 +476,8 @@ int main()
         viewer.scene_root->add(model_node4); // Ajout à la scène
     }
 
-    /*
-    Node* model_node5 = ModelLoader::loadModel(object_dir + "Light\\", "FtrLightTypicalCeiling.dae", model_shader);
+    
+    Node* model_node5 = ModelLoader::loadModel(object_dir + "BookShelf\\", "Untitled.fbx", model_shader);
     if (!model_node5) {
         std::cout << "Échec du chargement du modèle" << std::endl;
         return 1;
@@ -486,14 +486,71 @@ int main()
     if (model_node5 != nullptr) {
         // Appliquer une transformation initiale (taille et position)
         model_node5->setTransform(
-            glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, -2.0f, 0.0f)) *
+            glm::translate(glm::mat4(1.0f), glm::vec3(-1.0f, -2.0f, 1.872f)) *
             //glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(-1.0f, 0.0f, 0.0f)) *
-            glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f)) *
+            glm::rotate(glm::mat4(1.0f), glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f)) *
             glm::scale(glm::mat4(1.0f), glm::vec3(0.05f))
         );
 
         viewer.scene_root->add(model_node5); // Ajout à la scène
-    }*/
+    }
+
+
+    Node* model_node6 = ModelLoader::loadModel(object_dir + "guitar\\", "Untitled.fbx", model_shader);
+    if (!model_node6) {
+        std::cout << "Échec du chargement du modèle" << std::endl;
+        return 1;
+    }
+
+    if (model_node6 != nullptr) {
+        // Appliquer une transformation initiale (taille et position)
+        model_node6->setTransform(
+            glm::translate(glm::mat4(1.0f), glm::vec3(1.6f, -2.0f, 1.0f)) *
+            //glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(-1.0f, 0.0f, 0.0f)) *
+            glm::rotate(glm::mat4(1.0f), glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f)) *
+            glm::scale(glm::mat4(1.0f), glm::vec3(0.05f))
+        );
+
+        viewer.scene_root->add(model_node6); // Ajout à la scène
+    }
+
+    Node* model_node7 = ModelLoader::loadModel(object_dir + "table\\", "Untitled.fbx", model_shader);
+    if (!model_node7) {
+        std::cout << "Échec du chargement du modèle" << std::endl;
+        return 1;
+    }
+
+    if (model_node7 != nullptr) {
+        // Appliquer une transformation initiale (taille et position)
+        model_node7->setTransform(
+            glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, -2.0f, 0.0f)) *
+            //glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(-1.0f, 0.0f, 0.0f)) *
+            glm::rotate(glm::mat4(1.0f), glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f)) *
+            glm::scale(glm::mat4(1.0f), glm::vec3(0.05f))
+        );
+
+        viewer.scene_root->add(model_node7); // Ajout à la scène
+    }
+
+    Node* model_node8 = ModelLoader::loadModel(object_dir + "tv\\", "Untitled.fbx", model_shader);
+    if (!model_node8) {
+        std::cout << "Échec du chargement du modèle" << std::endl;
+        return 1;
+    }
+
+    if (model_node8 != nullptr) {
+        // Appliquer une transformation initiale (taille et position)
+        model_node8->setTransform(
+            glm::translate(glm::mat4(1.0f), glm::vec3(-2.0f, -1.0f, 0.0f)) *
+            //glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(-1.0f, 0.0f, 0.0f)) *
+            glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f)) *
+            glm::scale(glm::mat4(1.0f), glm::vec3(0.1f))
+        );
+
+        viewer.scene_root->add(model_node8); // Ajout à la scène
+    }
+
+
 
     /****************************
      * Animation Setup
@@ -513,8 +570,9 @@ int main()
 
         //Cube Animation
         /*cube_node->setTransform(
-            glm::rotate(glm::mat4(1.0f), time * 0.5f, glm::vec3(0.0f, 1.0f, 0.0f)) *
-            glm::scale(glm::mat4(1.0f), glm::vec3(sin(time) * 1.0f, sin(time) * 1.0f, sin(time) * 1.0f))
+            //glm::rotate(glm::mat4(1.0f), time * 0.5f, glm::vec3(0.0f, 1.0f, 0.0f)) *
+            //glm::scale(glm::mat4(1.0f), glm::vec3(sin(time) * 1.0f, sin(time) * 1.0f, sin(time) * 1.0f))
+            glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 2.0f * sin(time), 0.0f))
         );*/
 
         /*glm::vec3 position = glm::vec3(sin(time), 0.0f, cos(time));
