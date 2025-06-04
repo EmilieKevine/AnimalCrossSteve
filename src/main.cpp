@@ -376,6 +376,23 @@ int main()
 
     viewer.scene_root->add(cube_node);
 
+    // Create skybox 2 texture
+    Skybox* skybox2 = new Skybox(faces);
+
+    /****************************
+     * Textured Cube Setup
+     ****************************/
+
+     // Create cube with skybox
+    Shape* cube2 = new TexturedCube(skybox_shader, skybox);
+    glm::mat4 cube_mat2 = glm::translate(glm::mat4(1.0f), glm::vec3(7.0f, 0.0f, 0.0f)) * glm::scale(glm::mat4(1.0f), glm::vec3(1.0f, 1.0f, 1.0f));
+
+    Node* cube_node2 = new Node(cube_mat2);
+
+    cube_node2->add(cube2);
+
+    viewer.scene_root->add(cube_node2);
+
 
     // Load shader (utilise un shader standard pour MeshShape)
     Shader* model_shader = new Shader(shader_dir + "default.vert", shader_dir + "default.frag");
@@ -423,7 +440,7 @@ int main()
     }
 
 
-    Node* model_node3 = ModelLoader::loadModel(object_dir + "Pendulum Clock\\", "FtrClockPendulumWall.dae", model_shader);
+    Node* model_node3 = ModelLoader::loadModel(object_dir + "Pendulum Clock\\", "FtrClockPendulumWall2.dae", model_shader);
     if (!model_node3) {
         std::cout << "Échec du chargement du modèle" << std::endl;
         return 1;
@@ -441,6 +458,42 @@ int main()
         viewer.scene_root->add(model_node3); // Ajout à la scène
     }
 
+    Node* model_node4 = ModelLoader::loadModel(object_dir + "Sofa\\", "FtrSofaL.dae", model_shader);
+    if (!model_node4) {
+        std::cout << "Échec du chargement du modèle" << std::endl;
+        return 1;
+    }
+
+    if (model_node4 != nullptr) {
+        // Appliquer une transformation initiale (taille et position)
+        model_node4->setTransform(
+            glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, -1.0f, 0.0f)) *
+            //glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(-1.0f, 0.0f, 0.0f)) *
+            glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f)) *
+            glm::scale(glm::mat4(1.0f), glm::vec3(0.05f))
+        );
+
+        viewer.scene_root->add(model_node4); // Ajout à la scène
+    }
+
+    /*
+    Node* model_node5 = ModelLoader::loadModel(object_dir + "Light\\", "FtrLightTypicalCeiling.dae", model_shader);
+    if (!model_node5) {
+        std::cout << "Échec du chargement du modèle" << std::endl;
+        return 1;
+    }
+
+    if (model_node5 != nullptr) {
+        // Appliquer une transformation initiale (taille et position)
+        model_node5->setTransform(
+            glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, -2.0f, 0.0f)) *
+            //glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(-1.0f, 0.0f, 0.0f)) *
+            glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f)) *
+            glm::scale(glm::mat4(1.0f), glm::vec3(0.05f))
+        );
+
+        viewer.scene_root->add(model_node5); // Ajout à la scène
+    }*/
 
     /****************************
      * Animation Setup
@@ -464,20 +517,21 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(sin(time) * 1.0f, sin(time) * 1.0f, sin(time) * 1.0f))
         );*/
 
-        glm::vec3 position = glm::vec3(sin(time), 0.0f, cos(time));
+        /*glm::vec3 position = glm::vec3(sin(time), 0.0f, cos(time));
         glm::vec3 direction = glm::normalize(glm::vec3(cos(time), 0.0f, -sin(time)));
         glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f);
 
         // lookAt(inverse) permet de construire la matrice de rotation
-        glm::mat4 rotation = glm::inverse(glm::lookAt(glm::vec3(0.0f), direction, up));
+        glm::mat4 rotation = glm::inverse(glm::lookAt(glm::vec3(0.0f), direction, up));*/
 
-        /*model_node->setTransform(
-            glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, -2.0f, 0.0f)) *
-            glm::translate(glm::mat4(1.0f), position) *
-            rotation *
-            glm::rotate(glm::mat4(1.0f), glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f)) *
-            glm::scale(glm::mat4(1.0f), glm::vec3(0.1f))
-        );*/
+        model_node->setTransform(
+            glm::translate(glm::mat4(1.0f), glm::vec3(1.74f, -1.7f, -0.5f)) *
+            glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.25f*sin(2.0f*time)*sin(2.0f*time), 0.0f))*
+            //glm::translate(glm::mat4(1.0f), position) *
+            //rotation *
+            glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(0.0f, -1.0f, 0.0f)) *
+            glm::scale(glm::mat4(1.0f), glm::vec3(0.05f))
+        );
 
         model_node2->setTransform(
             glm::translate(glm::mat4(1.0f), glm::vec3(1.5f, -2.0f, 1.75f)) *
@@ -495,6 +549,20 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.08f))
         );
 
+        model_node4->setTransform(
+            glm::translate(glm::mat4(1.0f), glm::vec3(1.77f, -2.0f, -0.5f))*
+            //glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(-1.0f, 0.0f, 0.0f)) *
+            glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(0.0f, -1.0f, 0.0f))*
+            glm::scale(glm::mat4(1.0f), glm::vec3(0.07f))
+        );
+
+
+        /*model_node5->setTransform(
+            glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 1.79f + 0.6*sin(time)*sin(time), 0.0f)) *
+            //glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(-1.0f, 0.0f, 0.0f)) *
+            //glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f))*
+            glm::scale(glm::mat4(1.0f), glm::vec3(0.05f))
+        );*/
 
 
         //Spheres Animation

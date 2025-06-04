@@ -23,9 +23,16 @@ void main() {
         baseColor = texColor;
     }
 
+    // specular
+    float specularStrength = 0.3;
+    vec3 viewDir = normalize(-FragPos); // the viewer is always at (0,0,0) in view-space, so viewDir is (0,0,0) - Position => -Position
+    vec3 reflectDir = reflect(-lightDir, norm);  
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32);
+    vec3 specular = specularStrength * spec * baseColor;   // TODO calculate corrcet specular color
+
     vec3 ambient = 0.2 * baseColor;
     vec3 diffuse = diff * baseColor;
-    vec3 result = ambient + diffuse;
+    vec3 result = ambient + diffuse + specular;
 
     FragColor = vec4(result, 1.0);
 }

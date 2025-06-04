@@ -3,6 +3,7 @@
 
 #include "shape.h"
 #include "shader.h"
+#include <vector>
 #include <GL/glew.h>
 
 class Cube : public Shape {
@@ -13,6 +14,12 @@ public:
     virtual ~Cube();
 
 private:
+
+    std::vector<glm::vec3> vertex_buffer_data;
+    std::vector<unsigned int> indices;
+
+    unsigned int num_indices;
+
     GLuint VAO;
     GLuint buffers[2];
 };

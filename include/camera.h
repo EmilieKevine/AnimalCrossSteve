@@ -26,8 +26,13 @@ public:
 	float height;
 
 	// Adjust the speed of the camera and it's sensitivity when looking around
+	/*Vitesse PC Emilie
 	float basespeed = 0.01f;
-	float speed = 0.01f;
+	float speed = 0.01f;*/
+
+	/*Vitesse PC Adam*/
+	float basespeed = 0.001f;
+	float speed = 0.001f;
 	float sensitivity = 100.0f;
 
 	// Camera constructor to set up initial values

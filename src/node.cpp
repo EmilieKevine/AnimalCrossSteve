@@ -15,6 +15,7 @@ void Node::add(Node* node) {
 void Node::add(Shape* shape) {
     children_shape_.push_back(shape);
 }
+
 void Node::setSteve(GLFWwindow* win) {
     if (id_ == 1) {
         /*transform_ =
@@ -23,19 +24,25 @@ void Node::setSteve(GLFWwindow* win) {
 
         if (glfwGetKey(win, GLFW_KEY_UP) == GLFW_PRESS)
         {
-            transform_ = transform_ * glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.001f));
+            transform_ = transform_ * glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.00075f));
         }
         if (glfwGetKey(win, GLFW_KEY_DOWN) == GLFW_PRESS)
         {
-            transform_ = transform_ * glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -0.001f));
+            transform_ = transform_ * glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -0.00075f));
         }
         if (glfwGetKey(win, GLFW_KEY_LEFT) == GLFW_PRESS)
         {
-            transform_ = transform_ * glm::translate(glm::mat4(1.0f), glm::vec3(0.001f, 0.0f, 0.0f));
+            //transform_ = transform_ * glm::translate(glm::mat4(1.0f), glm::vec3(0.001f, 0.0f, 0.0f));
+            transform_ =
+                transform_ *
+                glm::rotate(glm::mat4(1.0f), glm::radians(0.05f), glm::vec3(0.0f, 1.0f, 0.0f));
         }
         if (glfwGetKey(win, GLFW_KEY_RIGHT) == GLFW_PRESS)
         {
-            transform_ = transform_ * glm::translate(glm::mat4(1.0f), glm::vec3(-0.001f, 0.0f, 0.0f));
+            //transform_ = transform_ * glm::translate(glm::mat4(1.0f), glm::vec3(-0.001f, 0.0f, 0.0f));
+            transform_ =
+                transform_ *
+                glm::rotate(glm::mat4(1.0f), glm::radians(0.05f), glm::vec3(0.0f, -1.0f, 0.0f));
         }
 
 
