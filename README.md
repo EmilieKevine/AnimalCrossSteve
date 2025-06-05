@@ -133,7 +133,9 @@ The project is fully interactive. Users can:
 
 ## 📷 Preview
 
-![preview](https://github.com/user-attachments/assets/a1b2e362-b9d2-4268-99c0-d84794894208)
+![preview1](https://github.com/user-attachments/assets/2861d836-207f-4eb2-b3ac-ad2444253edc)
+![preview2](https://github.com/user-attachments/assets/9c8ec893-d5fb-4eaf-bdf2-c64779e62c7e)
+![preview3](https://github.com/user-attachments/assets/d12bae51-57b0-462f-935f-e6ba8ea69a53)
 
 ---
 
