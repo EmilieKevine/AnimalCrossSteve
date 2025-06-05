@@ -146,6 +146,7 @@ The project is fully interactive. Users can:
 - [GLEW](http://glew.sourceforge.net/)
 - [GLM](https://github.com/g-truc/glm)
 - [Assimp](https://github.com/assimp/assimp)
+- [SFML](https://github.com/SFML/SFML)
 
 ### Compilation
 
