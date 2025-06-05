@@ -113,16 +113,18 @@ The project is fully interactive. Users can:
 
 - **Adam BELLIK**
   - Developed the interactive camera system (`Camera.cpp`)
-  - Managed 3D model imports using Assimp (`ModelLoader.cpp`)
   - Set up the skybox environment and textured cube rendering
-  - Managed the walls' collisions and the trasition of the rooms
+  - Managed the animation of the secondary (and imported) character
+  - Managed the keyboard control for the character "Steve"
+  - Managed 3D model imports using Assimp (`ModelLoader.cpp`)
+  - Managed the walls' collisions and the transitions of the rooms
 
 - **Emilie Kevine KENGNI MBOU**
   - Integrated external objects (bed, sofa, guitar...)
 
 - **Floriane TANG**
-  - Built the character "Steve" using spheres and cylinders
-  - Implemented the animation update function for "Steve"
+  - Built the character "Steve" using spheres, cylinders and a triangle
+  - Implemented the animation function for the character "Steve"
   - Customized and adapted the walls' and floors' texture
   - Wrote the README
 
