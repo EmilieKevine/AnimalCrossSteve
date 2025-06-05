@@ -778,7 +778,7 @@ int main()
     if (model_node14 != nullptr) {
         // Appliquer une transformation initiale (taille et position)
         model_node14->setTransform(
-            glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.5f, 0.6f)) *
+            glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.22f, 1.0f)) *
             glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, -1.8f, -1.0f)) *
             glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(1.0f, 0.0f, 0.0f)) *
             glm::rotate(glm::mat4(1.0f), glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f)) *
