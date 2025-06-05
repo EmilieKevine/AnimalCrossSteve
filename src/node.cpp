@@ -3,6 +3,7 @@
 #include <iostream>
 
 bool Node::piece = true;
+bool Node::piece2 = true;
 
 Node::Node(const glm::mat4& transform) :
     transform_(transform){

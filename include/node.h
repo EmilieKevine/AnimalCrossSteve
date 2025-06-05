@@ -54,6 +54,14 @@ public:
     static bool getPiece() {
         return piece;
     }
+
+    static bool getPiece2() {
+        return piece2;
+    }
+
+    static void setPiece2(bool b) {
+        piece2 = b;
+    }
     
 private:
     glm::mat4 transform_;
@@ -64,6 +72,7 @@ private:
     float way_ = 1.0f;
     bool direction = true;
     static bool piece;
+    static bool piece2;
 
 
 };

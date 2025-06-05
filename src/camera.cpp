@@ -37,12 +37,14 @@ void Camera::Matrix(float FOVdeg, float nearPlane, float farPlane, glm::mat4 &vi
 //Keyboard and mouse input management
 void Camera::Inputs(GLFWwindow* window)
 {
-	if (!(Node::getPiece())) {
+	if (!(Node::getPiece()) && Node::getPiece2()) {
+		Node::setPiece2(false);
 		Orientation = glm::vec3(-0.00306061f, -0.540021f, 0.841641f);
 		Position = glm::vec3(3.99697f, 1.02457f, - 3.70982f);
 	}
 
-	if (Node::getPiece()) {
+	if (Node::getPiece() && !(Node::getPiece2())) {
+		Node::setPiece2(true);
 		Orientation = glm::vec3(-0.00306061f, -0.540021f, 0.841641f);
 		Position = glm::vec3(-0.00392071f, 1.02457f, -3.70982f);
 	}
