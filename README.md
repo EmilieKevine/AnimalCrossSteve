@@ -5,14 +5,14 @@ Introduction to Computer Graphics Project – 3D Scene
 
 ## 📌 Project Overview
 
-This project **"AnimalCrossSteve"** was developed as part of the **"Introduction to Computer Graphics"** course. 
+This project was developed as part of the **"Introduction to Computer Graphics"** course. 
 The goal was to design and implement an original 3D scene that integrates the concepts covered in class.
 
 The final result is an interactive 3D scene featuring a controllable character, multiple imported models (including an animated one), and a dynamic environment.
 
 ## 🎨 Inspiration
 
-This project was inspired by the artistic style of **"Animal Crossing"** and the humorous internet meme known as **"Poisson Steve"**. 
+This project **"AnimalCrossSteve"** was inspired by the artistic style of **"Animal Crossing"** and the humorous internet meme known as **"Poisson Steve"**. 
 
 <img src="https://github.com/user-attachments/assets/f1bd455f-a01f-4191-8d1a-50b7cd845e84" alt="Poisson Steve" width="250"/>
 <img src="https://github.com/user-attachments/assets/5d64de09-98bc-485c-ad51-f14b2a8e5ce0" alt="Animal crossing 1" width="250"/>
