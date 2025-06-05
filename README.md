@@ -18,7 +18,7 @@ This project **"AnimalCrossSteve"** was inspired by the artistic style of **"Ani
 <img src="https://github.com/user-attachments/assets/5d64de09-98bc-485c-ad51-f14b2a8e5ce0" alt="Animal crossing 1" width="250"/>
 <img src="https://github.com/user-attachments/assets/1f1b6d83-9281-4900-a6eb-4b71e401092d" alt="Animal crossing 2" width="250"/>
 
-The scene combines handmade elements with imported assets for textures and props. 
+The scene combines handmade elements with imported assets for textures and props from "Animal Crossing".
 
 ### ✅ Handmade Elements
 
