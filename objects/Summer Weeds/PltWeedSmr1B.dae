@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Centrixe</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.6;  Revision: 68</authoring_tool>
+    </contributor>
+    <created>2020-06-04T11:17:22</created>
+    <modified>2020-06-04T11:17:22</modified>
+    <unit name="inch" meter="0.0254"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="mEnokorogusa">
+      <profile_COMMON>
+        <newparam sid="mEnokorogusa_Alb_png-surface">
+          <surface type="2D">
+            <init_from>mEnokorogusa_Alb_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="mEnokorogusa_Alb_png-sampler">
+          <sampler2D>
+            <source>mEnokorogusa_Alb_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="mEnokorogusa_Nrm_png-surface">
+          <surface type="2D">
+            <init_from>mEnokorogusa_Nrm_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="mEnokorogusa_Nrm_png-sampler">
+          <sampler2D>
+            <source>mEnokorogusa_Nrm_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="mEnokorogusa_Alb_png-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <texture texture="mEnokorogusa_Alb_png-sampler" texcoord="CHANNEL1"/>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="mEnokorogusa_Nrm_png-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <opacity_type sid="opacity_type" type="int">0</opacity_type>
+            <falloff_type sid="falloff_type" type="int">0</falloff_type>
+            <falloff sid="falloff" type="float">0</falloff>
+            <index_of_refraction sid="index_of_refraction" type="float">1.5</index_of_refraction>
+            <wire_size sid="wire_size" type="float">1</wire_size>
+            <wire_units sid="wire_units" type="int">0</wire_units>
+            <apply_reflection_dimming sid="apply_reflection_dimming" type="bool">0</apply_reflection_dimming>
+            <dim_level sid="dim_level" type="float">0</dim_level>
+            <reflection_level sid="reflection_level" type="float">3</reflection_level>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_texture_lock sid="ambient_diffuse_texture_lock" type="bool">1</ambient_diffuse_texture_lock>
+            <ambient_diffuse_lock sid="ambient_diffuse_lock" type="bool">1</ambient_diffuse_lock>
+            <diffuse_specular_lock sid="diffuse_specular_lock" type="bool">0</diffuse_specular_lock>
+            <use_self_illum_color sid="use_self_illum_color" type="bool">0</use_self_illum_color>
+            <self_illumination sid="self_illumination" type="float">0</self_illumination>
+            <specular_level sid="specular_level" type="float">0</specular_level>
+            <soften sid="soften" type="float">0.1</soften>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="mEnokorogusa-material" name="mEnokorogusa">
+      <instance_effect url="#mEnokorogusa"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa" name="PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa">
+      <mesh>
+        <source id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-positions">
+          <float_array id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-positions-array" count="96">-3.188877 0.9603205 -0.09868491 -2.163291 0.9603205 -0.09868491 -3.188877 1.822926 3.120603 -2.163291 1.822926 3.120603 -2.024072 0.9580888 -0.0908463 -1.258538 1.101736 -0.3694777 -1.288095 1.609145 2.266882 -0.5225618 1.752792 1.98825 2.261325 -1.231906 -0.1062081 3.12017 -1.008458 -0.3027756 2.801593 -0.2840669 3.331786 3.660437 -0.06061935 3.135218 2.698478 -1.23891 -0.08049953 3.259987 -1.021421 -0.2848721 3.186033 -0.759192 1.769551 3.747542 -0.5417033 1.565178 2.039956 -1.345726 -0.331995 3.2456 -1.345726 -0.331995 2.039956 -0.1452203 4.148353 3.2456 -0.1452203 4.148353 1.007743 -0.9868094 -0.3136448 2.072221 -1.260747 -0.05673206 0.4760724 -0.1095939 2.824598 1.54055 -0.3835313 3.081511 0.7299876 -0.7788805 -0.3664352 1.380495 -1.101685 -0.1296698 0.2742425 -0.30914 1.526155 0.9247501 -0.6319443 1.76292 -3.377219 1.150839 -0.4602982 -2.451934 0.981931 -0.2123688 -3.823527 1.701491 1.580491 -2.898242 1.532583 1.82842</float_array>
+          <technique_common>
+            <accessor source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-normals">
+          <float_array id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-normals-array" count="96">0 -0.9661064 0.2581441 0 -0.9661056 0.2581471 0 -0.9661027 0.2581583 0 -0.9660967 0.2581805 0.246595 -0.951118 0.1859178 0.2465838 -0.9511209 0.1859183 0.2465838 -0.9511209 0.1859183 0.2465827 -0.9511166 0.1859414 0.2914412 -0.9329741 0.2112376 0.2914412 -0.9329741 0.2112376 0.2914412 -0.9329741 0.2112376 0.2914476 -0.9329711 0.2112423 0.3989938 -0.907541 0.1310469 0.3989944 -0.9075425 0.1310352 0.3989901 -0.9075446 0.1310337 0.3989981 -0.907539 0.1310483 0 -0.9661056 0.2581471 0 -0.9661056 0.2581471 0 -0.9660884 0.2582117 0 -0.9660884 0.2582117 -0.2914303 -0.9329774 0.2112384 -0.2914412 -0.9329741 0.2112376 -0.291433 -0.9329766 0.2112382 -0.2914303 -0.9329774 0.2112384 -0.472005 -0.8754643 0.1037959 -0.4720096 -0.8754618 0.1037956 -0.4720067 -0.875462 0.1038076 -0.4720093 -0.8754604 0.1038088 -0.228954 -0.9510784 0.2074367 -0.2289541 -0.9510785 0.2074367 -0.2289535 -0.9510761 0.2074481 -0.2289546 -0.9510807 0.2074253</float_array>
+          <technique_common>
+            <accessor source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-normals-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-map-2">
+          <float_array id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-map-2-array" count="96">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-map-2-array" count="32" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-map0">
+          <float_array id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-map0-array" count="96">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0.8999024 1 0 0.8999024 1 0 0.8999024 1 0 0.8999024 1 0 0.8999024 1 0 0.8999024 1 0 0.8999024 1 0 0.8999024 1 0 1 1 0 1 1 0 1 1 0 1 1 0 0.8999024 1 0 0.8999024 1 0 0.8999024 1 0 0.8999024 0.5996094 0 0.6997071 0.5996094 0 0.6997071 0.5996094 0 0.6997071 0.5996094 0 0.6997071 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-map0-array" count="32" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-map1">
+          <float_array id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-map1-array" count="96">0 0.5647058 0 0 0.9960784 0 0.9960785 0.5647058 0 0.9960785 0.9960784 0 0 0.9960784 0 0 0.5647058 0 0.9960785 0.9960784 0 0.9960785 0.5647058 0 0 0.9960784 0 0 0.5647058 0 0.9960785 0.9960784 0 0.9960785 0.5647058 0 0 0.9960784 0 0 0.5647058 0 0.9960785 0.9960784 0 0.9960785 0.5647058 0 0 0.9960784 0 0 0.5647058 0 0.9960785 0.9960784 0 0.9960785 0.5647058 0 0 0.5647058 0 0 0.9960784 0 0.9960785 0.5647058 0 0.9960785 0.9960784 0 0 0.5647058 0 0 0.9960784 0 0.9960785 0.5647058 0 0.9960785 0.9960784 0 0 0.5647058 0 0 0.9960784 0 0.9960785 0.5647058 0 0.9960785 0.9960784 0</float_array>
+          <technique_common>
+            <accessor source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-map1-array" count="32" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-vertices">
+          <input semantic="POSITION" source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-positions"/>
+        </vertices>
+        <triangles material="mEnokorogusa" count="16">
+          <input semantic="VERTEX" source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-map0" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-map1" offset="3" set="0"/>
+          <p>0 0 0 0 1 1 1 1 2 2 2 2 1 1 1 1 3 3 3 3 2 2 2 2 4 4 4 4 5 5 5 5 6 6 6 6 5 5 5 5 7 7 7 7 6 6 6 6 8 8 8 8 9 9 9 9 10 10 10 10 9 9 9 9 11 11 11 11 10 10 10 10 12 12 12 12 13 13 13 13 14 14 14 14 13 13 13 13 15 15 15 15 14 14 14 14 16 16 16 16 17 17 17 17 18 18 18 18 17 17 17 17 19 19 19 19 18 18 18 18 20 20 20 20 21 21 21 21 22 22 22 22 21 21 21 21 23 23 23 23 22 22 22 22 24 24 24 24 25 25 25 25 26 26 26 26 25 25 25 25 27 27 27 27 26 26 26 26 28 28 28 28 29 29 29 29 30 30 30 30 29 29 29 29 31 31 31 31 30 30 30 30</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-skin1">
+      <skin source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-skin1-joints">
+          <Name_array id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-skin1-joints-array" count="1">joint0</Name_array>
+          <technique_common>
+            <accessor source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-skin1-joints-array" count="1" stride="1">
+              <param name="JOINT" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-skin1-bind_poses">
+          <float_array id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-skin1-bind_poses-array" count="16">1 0 0 0 0 0 1 0 0 -1 0 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-skin1-bind_poses-array" count="1" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-skin1-weights">
+          <float_array id="geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-skin1-weights-array" count="1">1</float_array>
+          <technique_common>
+            <accessor source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-skin1-weights-array" count="1" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-skin1-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-skin1-bind_poses"/>
+        </joints>
+        <vertex_weights count="32">
+          <input semantic="JOINT" source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-skin1-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-skin1-weights" offset="1"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="mEnokorogusa_Alb_png">
+      <init_from>./mEnokorogusa_Alb.png</init_from>
+    </image>
+    <image id="mEnokorogusa_Nrm_png">
+      <init_from>./mEnokorogusa_Nrm.png</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Root" name="Root" sid="joint0" type="JOINT">
+        <rotate>-1 0 0 -90</rotate>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+            <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+            <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+            <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+      <node id="node-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa" name="PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa">
+        <instance_controller url="#geom-PltWeedSmr2C_PltWeedSmr3_Enokoro_0__mEnokorogusa-skin1">
+          <skeleton>#node-Root</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="mEnokorogusa" target="#mEnokorogusa-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+            <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+            <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+            <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>
