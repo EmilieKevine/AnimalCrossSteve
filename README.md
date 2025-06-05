@@ -157,42 +157,11 @@ The project is fully interactive. Users can:
    ```
 
 2. Configure and build:
+You would need CMake(to build our project) which can be downloaded from [here](https://cmake.org/download/).
+  > ⚠️ **Important Note**:  
+  > Sometimes, the [Assimp](https://github.com/assimp/assimp) library is **not included** or **partially present** when cloning or downloading the project.  
+  > In such cases, you may need to **install or link Assimp manually** on your system.
 
-   ```bash
-   mkdir build && cd build
-   cmake ..
-   make
-   ```
-
-3. Run the project:
-
-   ```bash
-   ./AnimalCrossSteve
-   ```
+4. Run the project
 
 ---
-
-
-
-# Skeleton code for OpenGL using C++
-
-This is the skeleton code for creating graphics applications using OpenGL and C++.
-
-# Installation
-
-You would need CMake(to build our project) which can be downloaded from [here](https://cmake.org/download/).
-
-# Setup
-
-After cloning this repo, you also need to load the submodules GLEW, GLFW and GLM using the following command.
-
-    git submodule update --init --recursive
-
-
-## Run the Application
-
-To launch the window, simply run:
-
-    cmake .
-    make
-    ./opengl_program
