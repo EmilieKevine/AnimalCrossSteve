@@ -62,13 +62,16 @@ void Node::setSteve(GLFWwindow* win) {
     }
 
     else if (id_ > 1) {
+
+        float angle_max = 20.0f;
+
         if (glfwGetKey(win, GLFW_KEY_UP) == GLFW_PRESS)
         {
             float angle = 0.04f;
             totalAngle_ += angle * way_;
             float side = 1.0f;
-            if (totalAngle_ > 45.0f) { way_ = -way_; }
-            if (totalAngle_ < -45.0f) { way_ = -way_; }
+            if (totalAngle_ > angle_max) { way_ = -way_; }
+            if (totalAngle_ < -angle_max) { way_ = -way_; }
 
             if (id_ == 3) { side = -side; }
             if (id_ >= 4) {
@@ -82,13 +85,13 @@ void Node::setSteve(GLFWwindow* win) {
                     glm::rotate(glm::mat4(1.0f), glm::radians(angle * side * way_), glm::vec3(1.0f, 0.0f, 0.0f));
             }
         }
-        if (glfwGetKey(win, GLFW_KEY_DOWN) == GLFW_PRESS)
+        else if (glfwGetKey(win, GLFW_KEY_DOWN) == GLFW_PRESS)
         {
             float angle = 0.04f;
             totalAngle_ += angle * way_;
             float side = 1.0f;
-            if (totalAngle_ > 45.0f) { way_ = -way_; }
-            if (totalAngle_ < -45.0f) { way_ = -way_; }
+            if (totalAngle_ > angle_max) { way_ = -way_; }
+            if (totalAngle_ < -angle_max) { way_ = -way_; }
 
             if (id_ == 3) { side = -side; }
             if (id_ >= 4) {
@@ -102,13 +105,13 @@ void Node::setSteve(GLFWwindow* win) {
                     glm::rotate(glm::mat4(1.0f), glm::radians(angle * side * way_), glm::vec3(1.0f, 0.0f, 0.0f));
             }
         }
-        if (glfwGetKey(win, GLFW_KEY_LEFT) == GLFW_PRESS)
+        else if (glfwGetKey(win, GLFW_KEY_LEFT) == GLFW_PRESS)
         {
             float angle = 0.04f;
             totalAngle_ += angle * way_;
             float side = 1.0f;
-            if (totalAngle_ > 45.0f) { way_ = -way_; }
-            if (totalAngle_ < -45.0f) { way_ = -way_; }
+            if (totalAngle_ > angle_max) { way_ = -way_; }
+            if (totalAngle_ < -angle_max) { way_ = -way_; }
 
             if (id_ == 3) { side = -side; }
             if (id_ >= 4) {
@@ -122,13 +125,13 @@ void Node::setSteve(GLFWwindow* win) {
                     glm::rotate(glm::mat4(1.0f), glm::radians(angle * side * way_), glm::vec3(1.0f, 0.0f, 0.0f));
             }
         }
-        if (glfwGetKey(win, GLFW_KEY_RIGHT) == GLFW_PRESS)
+        else if (glfwGetKey(win, GLFW_KEY_RIGHT) == GLFW_PRESS)
         {
             float angle = 0.04f;
             totalAngle_ += angle * way_;
             float side = 1.0f;
-            if (totalAngle_ > 45.0f) { way_ = -way_; }
-            if (totalAngle_ < -45.0f) { way_ = -way_; }
+            if (totalAngle_ > angle_max) { way_ = -way_; }
+            if (totalAngle_ < -angle_max) { way_ = -way_; }
 
             if (id_ == 3) { side = -side; }
             if (id_ >= 4) {
@@ -141,6 +144,30 @@ void Node::setSteve(GLFWwindow* win) {
                     transform_ *
                     glm::rotate(glm::mat4(1.0f), glm::radians(angle * side * way_), glm::vec3(1.0f, 0.0f, 0.0f));
             }
+        }
+        else {
+
+            if (totalAngle_ != 0) {
+
+                float angle = 0.04f;
+                float side = 1.0f;
+                if (totalAngle_ > 0) { side = -side; }
+                totalAngle_ += angle * side;
+
+                if (id_ == 3) { side = -side; }
+                if (id_ >= 4) {
+                    transform_ =
+                        transform_ *
+                        glm::rotate(glm::mat4(1.0f), glm::radians(angle * -side), glm::vec3(0.0f, 1.0f, 0.0f));
+                }
+                else {
+                    transform_ =
+                        transform_ *
+                        glm::rotate(glm::mat4(1.0f), glm::radians(angle * side), glm::vec3(1.0f, 0.0f, 0.0f));
+                }
+            
+            }
+        
         }
 
 

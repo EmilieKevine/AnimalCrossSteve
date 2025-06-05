@@ -12,7 +12,7 @@ void main()
 {
     // ambient
     // TODO define ambient strength
-float ambient_strengh = 0.1;
+float ambient_strengh = 0.5;
     vec3 ambient = ambient_strengh * lightColor;   // TODO calculate corrcet ambient color
 
     // diffuse 
