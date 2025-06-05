@@ -350,7 +350,7 @@ int main()
     Lshoulder_node->id_ = 5;
     //Steve->setSteve(viewer.getWin()); 
 
-    // 15. Ajoute Steve ‡ la scËne
+    // 15. Ajoute Steve √† la sc√®ne
     viewer.scene_root->add(Steve);
 
 
@@ -418,10 +418,10 @@ int main()
     // Load shader (utilise un shader standard pour MeshShape)
     Shader* model_shader = new Shader(shader_dir + "default.vert", shader_dir + "default.frag");
 
-    // Charge un modËle .obj et le convertit en Node (via MeshShape)
+    // Charge un mod√®le .obj et le convertit en Node (via MeshShape)
     Node* model_node = ModelLoader::loadModel(object_dir + "Booker\\", "NpcSpDgb.fbx", model_shader);
     if (!model_node) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -434,14 +434,14 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.05f))
         );
 
-        viewer.scene_root->add(model_node); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node); // Ajout √† la sc√®ne
     }
 
 
 
     Node* model_node2 = ModelLoader::loadModel(object_dir + "objet_lit\\", "Untitled10.fbx", model_shader);
     if (!model_node2) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -454,7 +454,7 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.001f))
         );
 
-        viewer.scene_root->add(model_node2); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node2); // Ajout √† la sc√®ne
 
 
 
@@ -463,7 +463,7 @@ int main()
 
     Node* model_node3 = ModelLoader::loadModel(object_dir + "Pendulum Clock\\", "FtrClockPendulumWall2.dae", model_shader);
     if (!model_node3) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -476,12 +476,12 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.05f))
         );
 
-        viewer.scene_root->add(model_node3); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node3); // Ajout √† la sc√®ne
     }
 
     Node* model_node4 = ModelLoader::loadModel(object_dir + "Sofa\\", "FtrSofaL.dae", model_shader);
     if (!model_node4) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -494,13 +494,13 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.05f))
         );
 
-        viewer.scene_root->add(model_node4); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node4); // Ajout √† la sc√®ne
     }
 
     
     Node* model_node5 = ModelLoader::loadModel(object_dir + "BookShelf\\", "Untitled.fbx", model_shader);
     if (!model_node5) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -513,13 +513,13 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.05f))
         );
 
-        viewer.scene_root->add(model_node5); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node5); // Ajout √† la sc√®ne
     }
 
 
     Node* model_node6 = ModelLoader::loadModel(object_dir + "guitar\\", "Untitled.fbx", model_shader);
     if (!model_node6) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -532,12 +532,12 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.05f))
         );
 
-        viewer.scene_root->add(model_node6); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node6); // Ajout √† la sc√®ne
     }
 
     Node* model_node7 = ModelLoader::loadModel(object_dir + "table\\", "Untitled.fbx", model_shader);
     if (!model_node7) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -550,12 +550,12 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.05f))
         );
 
-        viewer.scene_root->add(model_node7); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node7); // Ajout √† la sc√®ne
     }
 
     Node* model_node8 = ModelLoader::loadModel(object_dir + "tv\\", "Untitled.fbx", model_shader);
     if (!model_node8) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -568,14 +568,14 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.1f))
         );
 
-        viewer.scene_root->add(model_node8); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node8); // Ajout √† la sc√®ne
     }
 
     // node Objet  9
 
     Node* model_node9 = ModelLoader::loadModel(object_dir + "Cedar Sapling\\", "UnitIconPltTreeCedarSeeding.dae", model_shader);
     if (!model_node9) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -588,7 +588,7 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.2f))
         );
 
-        viewer.scene_root->add(model_node9); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node9); // Ajout √† la sc√®ne
     }
 
 
@@ -596,7 +596,7 @@ int main()
 
     Node* model_node10 = ModelLoader::loadModel(object_dir + "Cedar Sapling\\", "UnitIconPltTreeCedarSeeding.dae", model_shader);
     if (!model_node10) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -609,7 +609,7 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.2f))
         );
 
-        viewer.scene_root->add(model_node10); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node10); // Ajout √† la sc√®ne
     }
 
 
@@ -617,7 +617,7 @@ int main()
 
     Node* model_node11 = ModelLoader::loadModel(object_dir + "Spring Weeds\\", "PltWeedSpr3.dae", model_shader);
     if (!model_node11) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -631,14 +631,14 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.15f))
         );
 
-        viewer.scene_root->add(model_node11); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node11); // Ajout √† la sc√®ne
     }
 
     // node Objet  12
 
     Node* model_node12 = ModelLoader::loadModel(object_dir + "Summer Weeds\\", "PltWeedSmr3.dae", model_shader);
     if (!model_node12) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -652,7 +652,7 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.1f))
         );
 
-        viewer.scene_root->add(model_node12); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node12); // Ajout √† la sc√®ne
     }
 
     /*
@@ -660,7 +660,7 @@ int main()
 
     Node* model_node13 = ModelLoader::loadModel(object_dir + "Mini DIY Workbench\\", "FtrWorkbenchS.dae", model_shader);
     if (!model_node13) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -674,7 +674,7 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.1f))
         );
 
-        viewer.scene_root->add(model_node13); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node13); // Ajout √† la sc√®ne
     }
     */
 
@@ -682,7 +682,7 @@ int main()
 
     Node* model_node13 = ModelLoader::loadModel(object_dir + "Leo\\", "FtrZodiacLeo.dae", model_shader);
     if (!model_node13) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -696,14 +696,14 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.1f))
         );
 
-        viewer.scene_root->add(model_node13); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node13); // Ajout √† la sc√®ne
     }
 
     /*
     *  // node Objet  14
      Node* model_node14 = ModelLoader::loadModel(object_dir + "Drying Rack\\", "FtrClothesstand.dae", model_shader);
     if (!model_node14) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -718,7 +718,7 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.1f))
         );
 
-        viewer.scene_root->add(model_node14); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node14); // Ajout √† la sc√®ne
     }
 
     */
@@ -726,7 +726,7 @@ int main()
     // node Objet  14
     Node* model_node18 = ModelLoader::loadModel(object_dir + "Pisces\\", "FtrZodiacPisces.dae", model_shader);
     if (!model_node18) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -741,7 +741,7 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.1f))
         );
 
-        viewer.scene_root->add(model_node18); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node18); // Ajout √† la sc√®ne
     }
 
 
@@ -751,7 +751,7 @@ int main()
     // node Objet  17
     Node* model_node17 = ModelLoader::loadModel(object_dir + "Capricorn\\", "FtrZodiacCapricornus.dae", model_shader);
     if (!model_node17) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -765,13 +765,13 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.1f))
         );
 
-        viewer.scene_root->add(model_node17); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node17); // Ajout √† la sc√®ne
     }
 
     // node Objet  14
     Node* model_node14 = ModelLoader::loadModel(object_dir + "Libra\\", "FtrZodiacLibra.dae", model_shader);
     if (!model_node14) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -786,7 +786,7 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.1f))
         );
 
-        viewer.scene_root->add(model_node14); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node14); // Ajout √† la sc√®ne
     }
 
 
@@ -795,7 +795,7 @@ int main()
     // node Objet  15
     Node* model_node15 = ModelLoader::loadModel(object_dir + "Aquarius\\", "FtrZodiacAquarius.dae", model_shader);
     if (!model_node15) {
-        std::cout << "…chec du chargement du modËle" << std::endl;
+        std::cout << "√âchec du chargement du mod√®le" << std::endl;
         return 1;
     }
 
@@ -809,7 +809,7 @@ int main()
             glm::scale(glm::mat4(1.0f), glm::vec3(0.1f))
         );
 
-        viewer.scene_root->add(model_node15); // Ajout ‡ la scËne
+        viewer.scene_root->add(model_node15); // Ajout √† la sc√®ne
     }
 
 
@@ -845,7 +845,7 @@ int main()
         glm::mat4 rotation = glm::inverse(glm::lookAt(glm::vec3(0.0f), direction, up));*/
 
         model_node->setTransform(
-            glm::translate(glm::mat4(1.0f), glm::vec3(-1.74f, -1.7f, 0.0f)) *
+            glm::translate(glm::mat4(1.0f), glm::vec3(-1.5f, -1.7f, 0.0f)) *
             glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.25f*sin(2.0f*time)*sin(2.0f*time), 0.0f))*
             //glm::translate(glm::mat4(1.0f), position) *
             //rotation *
