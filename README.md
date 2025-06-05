@@ -59,8 +59,8 @@ We implemented the following **bonus features** from the TPs:
 - 📦 **Model Loading with Assimp**  
   Loaded complex 3D models (`.fbx`, `.dae`) using **Assimp**, including textures and materials. Each model is integrated via a `mesh_shape` class.
 
-- 🌌 **Skybox Environment**  
-  Created immersive environments using **skyboxes**, with cube-mapped textures rendered via a custom GLSL shader.
+- 🏠 **Skybox Environment**  
+  Created rooms' environments using **skyboxes**, with cube-mapped textures rendered via a custom GLSL shader.
 
 - ✨ **Shader Combination**  
   Combined texturing and Phong illumination in custom shaders to render both **lit textured objects** and unlit skybox elements appropriately.
@@ -116,15 +116,17 @@ The project is fully interactive. Users can:
   - Set up the skybox environment and textured cube rendering
   - Managed 3D model imports using Assimp (`ModelLoader.cpp`)
   - Managed the animation of the secondary (and imported) character
-  - Managed the keyboard control for the character "Steve"
   - Managed the walls' collisions and the transitions of the rooms
 
 - **Emilie Kevine KENGNI MBOU**
-  - Integrated external objects (TV, bed, sofa, guitar...)
-  - Created the second room's skybox
+  - Set up the GitHub repository for the team
+  - Coordinated group work: organized meetings
+  - Integrated and positioned external 3D object in the main and secondary rooms
+  - Worked on the keyboard input logic for the character motion of "Steve"
+  - Create the PowerPoint
 
 - **Floriane TANG**
-  - Built the character "Steve" using spheres, cylinders and a triangle
+  - Built the character "Steve" and handled hierarchical transformations
   - Implemented the animation function for the character "Steve"
   - Customized and adapted the walls' and floors' texture
   - Wrote the README
