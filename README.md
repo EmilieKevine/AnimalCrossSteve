@@ -1,18 +1,14 @@
 # 🎓 AnimalCrossSteve 
 Introduction to Computer Graphics Project – 3D Scene
 
+👥 Group Members: Adam BELLIK, Emilie Kevine KENGNI MBOU, Floriane TANG
+
 ## 📌 Project Overview
 
 This project was developed as part of the **"Introduction to Computer Graphics"** course. 
 The goal was to design and implement an original 3D scene that integrates the concepts covered in class.
 
 The final result is an interactive 3D scene featuring a controllable character, multiple imported models (including an animated one), and a dynamic environment.
-
-## 👥 Group Members
-
-- [Adam BELLIK]  
-- [Emilie Kevine KENGNI MBOU]  
-- [Floriane TANG]
 
 ## 🎨 Inspiration
 
@@ -113,9 +109,28 @@ The project is fully interactive. Users can:
 
 ---
 
+## 🧑‍🤝‍🧑 Work Distribution
+
+- **Adam BELLIK**
+  - Developed the interactive camera system (`Camera.cpp`)
+  - Managed 3D model imports using Assimp (`ModelLoader.cpp`)
+  - Set up the skybox environment and textured cube rendering
+  - Managed the walls' collisions and the trasition of the rooms
+
+- **Emilie Kevine KENGNI MBOU**
+  - Integrated external objects (bed, sofa, guitar...)
+
+- **Floriane TANG**
+  - Built the character "Steve" using spheres and cylinders
+  - Implemented the animation update function for "Steve"
+  - Customized and adapted the walls' and floors' texture
+  - Wrote the README
+
+---
+
 ## 📷 Preview
 
-*(Insert screenshots or video links here)*
+![preview](https://github.com/user-attachments/assets/a1b2e362-b9d2-4268-99c0-d84794894208)
 
 ---
 
