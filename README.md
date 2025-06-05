@@ -133,10 +133,9 @@ The project is fully interactive. Users can:
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/graphics-project.git
-   cd graphics-project
+   git clone https://github.com/EmilieKevine/AnimalCrossSteve.git
+   cd AnimalCrossSteve
    ```
-  
 
 2. Configure and build:
 
@@ -149,7 +148,7 @@ The project is fully interactive. Users can:
 3. Run the project:
 
    ```bash
-   ./graphics_project
+   ./AnimalCrossSteve
    ```
 
 ---
