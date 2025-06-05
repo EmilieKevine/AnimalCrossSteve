@@ -5,7 +5,7 @@ Introduction to Computer Graphics Project – 3D Scene
 
 ## 📌 Project Overview
 
-This project was developed as part of the **"Introduction to Computer Graphics"** course. 
+This project **"AnimalCrossSteve"** was developed as part of the **"Introduction to Computer Graphics"** course. 
 The goal was to design and implement an original 3D scene that integrates the concepts covered in class.
 
 The final result is an interactive 3D scene featuring a controllable character, multiple imported models (including an animated one), and a dynamic environment.
