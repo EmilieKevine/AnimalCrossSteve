@@ -18,9 +18,9 @@ The final result is an interactive 3D scene featuring a controllable character, 
 
 This project was inspired by the artistic style of **"Animal Crossing"** and the humorous internet meme known as **"Poisson Steve"**. 
 
-<img src="https://github.com/user-attachments/assets/f1bd455f-a01f-4191-8d1a-50b7cd845e84" alt="Poisson Steve" width="300"/>
-<img src="https://github.com/user-attachments/assets/5d64de09-98bc-485c-ad51-f14b2a8e5ce0" alt="Animal crossing 1" width="300"/>
-<img src="https://github.com/user-attachments/assets/1f1b6d83-9281-4900-a6eb-4b71e401092d" alt="Animal crossing 2" width="300"/>
+<img src="https://github.com/user-attachments/assets/f1bd455f-a01f-4191-8d1a-50b7cd845e84" alt="Poisson Steve" width="250"/>
+<img src="https://github.com/user-attachments/assets/5d64de09-98bc-485c-ad51-f14b2a8e5ce0" alt="Animal crossing 1" width="250"/>
+<img src="https://github.com/user-attachments/assets/1f1b6d83-9281-4900-a6eb-4b71e401092d" alt="Animal crossing 2" width="250"/>
 
 The scene combines handmade elements with imported assets for textures and props. 
 
