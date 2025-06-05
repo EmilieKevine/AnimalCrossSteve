@@ -17,6 +17,9 @@ void Node::add(Shape* shape) {
 }
 
 void Node::setSteve(GLFWwindow* win) {
+    
+    float move_speed = 0.002f;
+    
     if (id_ == 1) {
         /*transform_ =
             transform_ *
@@ -24,11 +27,11 @@ void Node::setSteve(GLFWwindow* win) {
 
         if (glfwGetKey(win, GLFW_KEY_UP) == GLFW_PRESS)
         {
-            transform_ = transform_ * glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.00075f));
+            transform_ = transform_ * glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, move_speed));
         }
         if (glfwGetKey(win, GLFW_KEY_DOWN) == GLFW_PRESS)
         {
-            transform_ = transform_ * glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -0.00075f));
+            transform_ = transform_ * glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -move_speed));
         }
         if (glfwGetKey(win, GLFW_KEY_LEFT) == GLFW_PRESS)
         {
@@ -64,10 +67,10 @@ void Node::setSteve(GLFWwindow* win) {
     else if (id_ > 1) {
 
         float angle_max = 20.0f;
+        float angle = 0.1f;
 
         if (glfwGetKey(win, GLFW_KEY_UP) == GLFW_PRESS)
         {
-            float angle = 0.04f;
             totalAngle_ += angle * way_;
             float side = 1.0f;
             if (totalAngle_ > angle_max) { way_ = -way_; }
@@ -87,7 +90,6 @@ void Node::setSteve(GLFWwindow* win) {
         }
         else if (glfwGetKey(win, GLFW_KEY_DOWN) == GLFW_PRESS)
         {
-            float angle = 0.04f;
             totalAngle_ += angle * way_;
             float side = 1.0f;
             if (totalAngle_ > angle_max) { way_ = -way_; }
@@ -107,7 +109,6 @@ void Node::setSteve(GLFWwindow* win) {
         }
         else if (glfwGetKey(win, GLFW_KEY_LEFT) == GLFW_PRESS)
         {
-            float angle = 0.04f;
             totalAngle_ += angle * way_;
             float side = 1.0f;
             if (totalAngle_ > angle_max) { way_ = -way_; }
@@ -127,7 +128,6 @@ void Node::setSteve(GLFWwindow* win) {
         }
         else if (glfwGetKey(win, GLFW_KEY_RIGHT) == GLFW_PRESS)
         {
-            float angle = 0.04f;
             totalAngle_ += angle * way_;
             float side = 1.0f;
             if (totalAngle_ > angle_max) { way_ = -way_; }
@@ -149,7 +149,7 @@ void Node::setSteve(GLFWwindow* win) {
 
             if (totalAngle_ != 0) {
 
-                float angle = 0.04f;
+                float angle = 0.1f;
                 float side = 1.0f;
                 if (totalAngle_ > 0) { side = -side; }
                 totalAngle_ += angle * side;

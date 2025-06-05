@@ -352,12 +352,21 @@ int main()
 
     // Define paths to skybox textures (6 faces)
     std::vector<std::string> faces = {
-            texture_dir + "wall.png",
+            texture_dir + "walld.png",
             texture_dir + "wall.png",
             texture_dir + "wall.png",
             texture_dir + "floor.png",
             texture_dir + "wall.png",
             texture_dir + "wall.png"
+    };
+
+    std::vector<std::string> faces2 = {
+            texture_dir + "wall2win.png",
+            texture_dir + "wall2g.png",
+            texture_dir + "wall2.png",
+            texture_dir + "floor2.png",
+            texture_dir + "wall2.png",
+            texture_dir + "wall2.png"
     };
 
     // Create skybox texture
@@ -378,15 +387,15 @@ int main()
     viewer.scene_root->add(cube_node);
 
     // Create skybox 2 texture
-    Skybox* skybox2 = new Skybox(faces);
+    Skybox* skybox2 = new Skybox(faces2);
 
     /****************************
      * Textured Cube Setup
      ****************************/
 
      // Create cube with skybox
-    Shape* cube2 = new TexturedCube(skybox_shader, skybox, glm::vec3(7.0f, -30.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), white);
-    glm::mat4 cube_mat2 = glm::translate(glm::mat4(1.0f), glm::vec3(7.0f, 0.0f, 0.0f)) * glm::scale(glm::mat4(1.0f), glm::vec3(1.0f, 1.0f, 1.0f));
+    Shape* cube2 = new TexturedCube(skybox_shader, skybox2, glm::vec3(7.0f, -30.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), white);
+    glm::mat4 cube_mat2 = glm::translate(glm::mat4(1.0f), glm::vec3(4.001f, 0.0f, 0.0f)) * glm::scale(glm::mat4(1.0f), glm::vec3(1.0f, 1.0f, 1.0f));
 
     Node* cube_node2 = new Node(cube_mat2);
 
